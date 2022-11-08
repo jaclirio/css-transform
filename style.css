@@ -1,0 +1,34 @@
+div{
+    background-color: hsl(200, 70%, 30%);
+    width: 100px;
+    height: 100px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+
+    transform: rotate(90deg); /* transform: rotate(.25turn) */
+    /* transform: rotateX(.20turn);  Moving away from screen */
+    /* transform: scale(1.5); 1.5x bigger X&Y axis */
+    transform: scale(.8,.9); /* scale(X,Y) */
+    transform: translate(20px, 40px); /* Move x-axis to the right */
+    position: relative;
+    transform: skew(20deg, -30deg);
+
+    transform: scale(.8,.9) translate(20px, 40px) skew(20deg, -30deg);
+}
+
+div::after{
+    content: 'After';
+    background-color: red;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%); /* Moves half of width to the left */
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
